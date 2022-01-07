@@ -22,10 +22,8 @@ function App() {
   }
 
   const onChangeExportar = function(evento){
-    alert("exportar")
     html2canvas(document.querySelector("#meme")).then(canvas => {
       var img    = canvas.toDataURL("image/png");
-
       var link = document.createElement('a');
       link.download = 'meme.png';
       link.href = img;
@@ -38,6 +36,7 @@ function App() {
     <div className="App">
       
       <select onChange={onChangeImagen}>
+        <option value="fire">Seleccione una Imagen</option>
         <option value="fire">Casa en llamas</option>
         <option value="futurama">Futurama</option>
         <option value="history">History Channel</option>
